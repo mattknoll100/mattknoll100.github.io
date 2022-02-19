@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0; 
+}
+.Nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color:#1a1a1a;
+    display: inline-block;
+    z-index: 1;
+    font-size: 0px;
+}
+.Nav li {
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    border-right: 1px white outset;
+}
+.Nav span {
+    font-size: 24px;
+}
+.Nav li:last-child {
+    border-right: none;
+}
+.Nav li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.Nav li a:hover {
+    background-color: #DB5461;
+}
+#Home {
+    background: lightblue url("https://arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/HBWLPGVOJJDHNPMJ3K5ZJPTB5Q.jpg")no-repeat center 8% fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#name {
+    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    padding-top: 250px;
+    font-size: 100px;
+    color: white;
+}
+hr {
+   display: block;
+   position: relative;
+   padding: 0;
+   margin: 8px auto;
+   height: 0;
+   width: 75%;
+   max-height: 0;
+   font-size: 1px;
+   line-height: 0;
+   clear: both;
+   border: none;
+   border-top: 1px solid lightgray;
+   border-bottom: 1px solid white;
+}
+#dev {
+    text-align: center;
+    font-family: 'Alegreya SC', serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 100;
+    color:white;
+}
+#Profile {
+    background-color: white;
+    overflow: auto;
+    width: 100%;
+    position: relative;
+}
+.headings {
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 50px;
+    color: #DB5461;
+    font-weight: 400;
+}
+#Summary {
+    display: inline-block;
+    width: 33%;
+    float: left;
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+}
+#Picture {
+    display: inline-block;
+    width: 33%;
+    padding: 50px;
+    text-align: center;
+}
+#Me {
+    border: 5px solid #E3F2FD;
+    border-radius: 100%;
+}
+#Details {
+    display: inline-block;
+    width: 33%;
+    float: right;
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+}
+#Details span {
+    font-weight: 700;
+}
+#Experience {
+    background-color: lightgray;
+    overflow: auto;
+    width: 100%;
+    position: relative;
+}
+#Stockton {
+    display: inline-block;
+    width: 30%;
+    float: left;
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+}
+#stocktonInfo {
+    display: inline-block;
+    width: 70%;
+    float: right;
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+}
+#Continued {
+    display: inline-block;
+    width: 30%;
+    float: left;
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+}
+#continuedInfo {
+    display: inline-block;
+    width: 70%;
+    float: right;
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+}
+#Abilities {
+    background-color: white;
+    overflow: auto;
+    width: 100%;
+    position: relative;
+}
+#Abilities ul {
+    list-style-type: none;
+}
+#Skills {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+    text-align: center;
+}
+#Tools {
+    display: inline-block;
+    width: 50%;
+    float: right;
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+    text-align: center;
+}
+#Projects {
+    width: 100%;
+    background-color: lightgray;
+    overflow: auto;
+    position: relative;
+}
+#describe {
+    display: inline-block;
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+    text-align: center;
+}
+#Contact {
+    width: 100%;
+    overflow: auto;
+    background-color: white;
+    position: relative;
+}
+#contacts {
+    padding: 50px;
+    font-family: 'Catamaran', sans-serif;
+    text-align: center;
+}
+#dis {
+    text-decoration: none;
+    color: black;
+}
+#dis:hover {
+    color: #DB5461;
+}
