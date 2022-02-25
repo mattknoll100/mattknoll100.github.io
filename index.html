@@ -2,131 +2,219 @@
 <html>
     <head>
         <link href="resumeCSS.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i|Quicksand|Alegreya+Sans+SC|Alegreya+SC|Catamaran: 400,100,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand|Alegreya+Sans+SC|Alegreya+SC|Catamaran: 100,400,500,700,800,900" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Matthew Knoll</title>
-        <link rel="icon" type="image/x-icon" href="ayo.jpg">
+        <link rel="icon" type="image/x-icon" href="beee.png">
+        <script>
+            function hideNav(e) {
+                var list = document.getElementById("nav");
+                if (!list.contains(e.target) || e.target.id == "hamburger") {
+                    navigate();
+                }
+                document.removeEventListener("click", hideNav);
+            }
+            function navigate() {
+                //navigate display block
+                var elements = document.getElementsByClassName("navigate");
+                if (!elements[0].style.display || elements[0].style.display == "none") {
+                    for (var i = 0; i < elements.length; i++) {
+                        elements[i].style.display = "block";
+                        elements[i].style.visibility = "visible";
+                    }
+                    event.stopPropagation();
+                    document.addEventListener("click", hideNav);
+                } else {
+                    for (var i = 0; i < elements.length; i++) {
+                        elements[i].style.display = "none";
+                        elements[i].style.visibility = "hidden";
+                    }
+                }
+                
+            }
+            function hamburgerHover() {
+                var bar1 = document.getElementById("bar1");
+                var bar2 = document.getElementById("bar2");
+                var bar3 = document.getElementById("bar3");
+                var menu = [bar1, bar2, bar3];
+                if (bar1.style.backgroundColor == "floralwhite" || bar1.style.backgroundColor == "") {
+                    for (var i = 0; i < menu.length; i++) {
+                        menu[i].style.backgroundColor = "#DB5461";
+                    }
+                } else {
+                    for (var i = 0; i < menu.length; i++) {
+                        menu[i].style.backgroundColor = "floralwhite";
+                    }
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
-            <ul class="Nav">
-                <li><a href="#Home">H<span>OME</span></a></li>
-                <li><a href="#profileNav">P<span>ROFILE</span></a></li>
-                <li><a href="#experienceNav">E<span>XPERIENCE</span></a></li>
-                <li><a href="#abilitiesNav">A<span>BILITIES</span></a></li>
-                <li><a href="#projectsNav">P<span>ROJECTS</span></a></li>
-                <li><a href="#contactNav">C<span>ONTACT</span></a></li>
+            <div id="logo">
+                <img src="beee.png"/>
+            </div>
+            <ul id="nav">
+                <li id="hamburger">
+                    <div id="hamburgerBar" onclick="navigate();" onmouseover="hamburgerHover();" onmouseout="hamburgerHover();">
+                        <hr id="bar1" /><hr id="bar2" /><hr id="bar3" />
+                    </div>
+                </li>
+                <li class="navigate"><a href="#homeNav" onclick="navigate();">H<span>OME</span></a></li>
+                <li class="navigate"><a href="#profileNav" onclick="navigate();">P<span>ROFILE</span></a></li>
+                <li class="navigate"><a href="#experienceNav" onclick="navigate();">E<span>XPERIENCE</span></a></li>
+                <li class="navigate"><a href="#abilitiesNav" onclick="navigate();">A<span>BILITIES</span></a></li>
+                <li class="navigate"><a href="#projectsNav" onclick="navigate();">P<span>ROJECTS</span></a></li>
+                <li class="navigate"><a href="#contactNav" onclick="navigate();">C<span>ONTACT</span></a></li>
             </ul>
         </header>
-        <div id="Home">
-            <h1 id="name">Matthew Knoll</h1>
-            <hr id="first">
-            <h2 id="dev">Software Developer</h2>
-            <div id="profileNav" style="position: absolute; bottom: 78px;"></div>
+        <div id="homeNav"></div>
+        <div id="home">
+                <h1 id="name">Matthew Knoll</h1>
+                <hr class="sectionBreak" />
+                <h2 id="dev">Software Developer</h2>
+                <div id="profileNav" class="navBar"></div>
         </div>
-        <div id="Profile">
-            <h1 class="headings">Professional Summary</h1>
-            <hr>
-            <div id="Summary">
-                <p>Well-rounded software developer who is knowledgeable in HTML, CSS, JavaScript, jQuery, C#, and SQL with a specialty in the ASP.NET platform.  A determined individual looking for the opportunity to solve complex problems on a daily basis in the pursuit of developing beautiful, user-friendly web applications with clean, optimized code.</p>
-            </div>
-            <div id="Picture">
-                <img id="Me" src="ayo.jpg" alt="Matt Knoll" style="max-width: 100%;"/>
-            </div>
-            <div id="Details">
-                <ul style="list-style-type: none;">
-                    <li><span>Name: </span></li>
-                    <li>Matthew Knoll</li>
-                    <li><span>Age: </span></li>
-                    <li>29</li>
-                    <li><span>Location: </span></li>
-                    <li>Wall Township, NJ</li>
-                </ul>
-            </div>
-            <div id="experienceNav" style="position: absolute; bottom: 78px;"></div>
-        </div>
-        <div id="Experience">
-            <h1 class="headings">Experience</h1>
-            <hr>
-            <div style="overflow: auto;">
-                <div id="Stockton">
-                    <h3>Stockton University</h3>
-                    <p>September 2011 - May 2015</p>
+        <div class="white">
+            <div class="section">
+                <h1 class="headings">Professional Summary</h1>
+                <hr class="sectionBreak"/>
+                <div id="summary">
+                    <h2>About Me</h2>
+                    <p>I am a well-rounded software developer with expertise in HTML, CSS, JavaScript, jQuery, C#, and SQL with a specialty in the ASP.NET platform.  I have great patience and determination in problem solving and I take pride in my work and the company I represent.  I am currently looking for an opportunity to solve complex problems on a daily basis in the pursuit of developing attractive, user-friendly web applications with clean, optimized code.</p>
                 </div>
-                <div id="stocktonInfo">
-                    <h4>Bachelor of Science in Mathematics</h4>
-                    <p>In earning a math degree, I was introduced to concepts in a diverse field of maths.  My studies culminated with an Independent Study on Innerconnections in Mathematics with a focus on Abstract Algebra.  I was also introduced to the world of Software Development.  My relevant coursework included the courses Programming and Problem Solving, Computer Science: An Overview, and Discrete Math.  My studies in mathematics prepared me well for a career in Software Development.  Mathematics teaches thorough and strict logical thinking.  Also, solving mathematical proofs teaches the ability to patiently work on one problem for hours until a solution is reached.</p>
+                <div id="picture">
+                    <img id="me" src="beee.png" alt="Matt Knoll"/>
                 </div>
-            </div>
-            <div style="overflow: auto;">
-                <div id="Continued">
-                    <h3>Continued Education</h3>
-                    <p>May 2015 - present</p>
+                <div id="details">
+                    <h2>Details</h2>
+                    <ul>
+                        <li><span>Name: </span></li>
+                        <li>Matthew Knoll</li>
+                        <li><span>Age: </span></li>
+                        <li>29</li>
+                        <li><span>Location: </span></li>
+                        <li>Wall Township, New Jersey, The United States of America</li>
+                    </ul>
                 </div>
-                <div id="continuedInfo">
-                    <h4>Software Development</h4>
-                    <p>After graduation, I found a passion for programming and pursued a career in Software Development.  I completed numerous online courses offered on sites such as codecademy.com and many coding puzzles on sites like codility.com.  Then, I began to build gradually more complicated projects.  I built a fully functioning calculator with a GUI, a card game simulator, a surf forecasting app, and a website.  I found that building projects was by far my most effective method of learning.</p>
+                <div id="experienceNav" class="navBar"></div>
+            </div>
+        </div>
+        <div class="gray">
+            <div class="section">
+                <h1 class="headings">Experience</h1>
+                <hr class="sectionBreak"/>
+                <div class="expSection">
+                    <div class="expLabel">
+                        <h3>Stockton University</h3>
+                        <p>September 2011 - May 2015</p>
+                    </div>
+                    <div class="expInfo">
+                        <h4>Bachelor of Science in Mathematics</h4>
+                        <p>Mathematics teaches thorough and strict logical thinking, creative problem solving, and patience.  These skills prepared me well for a career in Software Development.  I was introduced to programming in Java with the course Programming and Problem Solving.  After graduation I found a passion for it.</p>
+                    </div>
                 </div>
+                <br />
+                <div class="expSection">
+                    <div class="expLabel">
+                        <h3>Continued Education</h3>
+                        <p>May 2015 - Present</p>
+                    </div>
+                    <div class="expInfo">
+                        <h4>Self Taught Software Development</h4>
+                        <p>After deciding to pursue a career in Software Development, I was able to learn quickly.  I completed online courses, solved puzzles, and built projects, which was by far my greatest learning tool.  I learned by doing, figuring out exactly the problem I needed to solve one step at a time until the project was complete.  I used this method to learn many languages and build projects until I earned a role as a full stack Web Applications Developer.</p>
+                    </div>
+                </div>
+                <br />
+                <div class="expSection">
+                    <div class="expLabel">
+                        <h3>Web Applications Developer</h3>
+                        <p>February 2017 - June 2019</p>
+                    </div>
+                    <div class="expInfo">
+                        <h4>Key Software Systems</h4>
+                        <p>As part of a small team of 4 developers, I maintained and enhanced a large SaaS ASP.NET application used to operate all aspects of courier companies.  I provided clean, reusable code in HTML5, CSS3, JavaScript, jQuery, C#, Visual Basic, and SQL on a daily basis by adding new features and fixing software bugs.  I was in continuous communication with the development team and Graphic Designer, as well as the QA team in order to provide the greatest product possible.  I completed a project that increased the applications compatibility from solely Internet Explorer 7 to all modern web browsers (Chrome, IE, Edge, Firefox, Opera, and Safari) and mobile/tablet devices while enhancing the front end with a new design and integration with Kendo UI.  I loved working as a developer, but for personal and family reasons I left the position.</p>
+                    </div>
+                </div>
+                <br />
+                <div class="expSection">
+                    <div class="expLabel">
+                        <h3>The Family Business</h3>
+                        <p>June 2019 - Present</p>
+                    </div>
+                    <div class="expInfo">
+                        <h4></h4>
+                        <p>I spent time managing my family’s resort destination business and held many responsibilities in customer and food service.  In January 2022 I began work at Whole Foods Market preparing food and have been in pursuit of my Software Development career, spending my free time learning and building several projects, including this site.</p>
+                    </div>
+                </div>
+                <div id="abilitiesNav" class="navBar"></div>
             </div>
-            <div id="abilitiesNav" style="position: absolute; bottom: 78px;"></div>
         </div>
-        <div id="Abilities">
-            <h1 class="headings">Abilities</h1>
-            <hr>
-            <div id="Skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>jQuery</li>
-                    <li>Kendo UI</li>
-                    <li>C#</li>
-                    <li>Visual Basic</li>
-                    <li>SQL</li>
-                    <li>ASP.NET</li>
-                    <li>Cross-Browser Compatibility</li>
-                    <li>Google Maps API</li>
-                    <li>MapQuest API</li>
-                    <li>JSON</li>    
-                    <li>REST</li>
-                    <li>Java</li>
-                    <li>Objective-C</li>  
-                </ul>
+        <div class="white">
+            <div class="section">
+                <h1 class="headings">Abilities</h1>
+                <hr class="sectionBreak" />
+                <div id="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>jQuery</li>
+                        <li>Kendo UI</li>
+                        <li>C#</li>
+                        <li>Visual Basic</li>
+                        <li>SQL</li>
+                        <li>ASP.NET</li>
+                        <li>Cross-Browser Compatibility</li>
+                        <li>Google Maps API</li>
+                        <li>MapQuest API</li>
+                        <li>JSON</li>
+                        <li>REST</li>
+                        <li>Java</li>
+                        <li>Objective-C</li>
+                    </ul>
+                </div>
+                <hr class="sectionBreak" id="skillsToolsBreak"/>
+                <div id="tools">
+                    <h2>Tools</h2>
+                    <ul>
+                        <li>Azure DevOps</li>
+                        <li>Git</li>
+                        <li>Microsoft Visual Studio</li>
+                        <li>JIRA</li>
+                        <li>Windows OS</li>
+                        <li>macOS</li>
+                        <li>BlueJ</li>
+                        <li>Brackets</li>
+                    </ul>
+                </div>
+                <div id="projectsNav" class="navBar"></div>
             </div>
-            <div id="Tools">
-                <h2>Tools</h2>
-                <ul>
-                    <li>Azure DevOps</li>
-                    <li>Git</li>
-                    <li>Microsoft Visual Studio</li>
-                    <li>JIRA</li>
-                    <li>Windows OS</li>
-                    <li>macOS</li>
-                    <li>BlueJ</li>
-                    <li>Brackets</li>
-                </ul>
-            </div>
-            <div id="projectsNav" style="position: absolute; bottom: 78px;"></div>
         </div>
-        <div id="Projects">
-            <h1 class="headings">Projects</h1>
-            <hr>
-            <div id="describe">
-                <p>Projects that I have built include a surf forecasting app, a fully functioning calculator, this website, a card game simulator, and for your enjoyment, this JavaScript function that will tell you how long the caffeine you drank will stay in your system: </p>
+        <div class="gray">
+            <div class="section">
+                <h1 class="headings">Projects</h1>
+                <hr class="sectionBreak"/>
+                <div id="describe">
+                    <p>Projects I am currently working on, both for my personal use and in the constant quest to learn, include a surf forecasting application, a Spotify alarm clock, an iOS maps app, and this website, which will be constantly evolving and updated.</p>
+                </div>
+                <div id="contactNav" class="navBar"></div>
             </div>
-            <div id="contactNav" style="position: absolute; bottom: 78px;"></div>
         </div>
-        <div id="Contact">
-            <h1 class="headings">Contact</h1>
-            <hr>
-            <div id="contacts"> 
-                <h3>Email: </h3>
-                <p><a id="dis" href = "mailto: mattknoll100.com">mattknoll100@gmail.com</a></p>
-                <h3>Phone: </h3>
-                <p><a href="tel:609-410-6462">(609)-410-6462</a></p>
+        <div class="white">
+            <div class="section">
+                <h1 class="headings">Contact</h1>
+                <hr class="sectionBreak"/>
+                <div id="contacts">
+                    <h3>Email: </h3>
+                    <p><a class="contactLink" href="mailto: mattknoll100.com">mattknoll100@gmail.com</a></p>
+                    <h3>Phone: </h3>
+                    <p><a class="contactLink" href="tel:609-410-6462">(609)-410-6462</a></p>
+                </div>
+                <hr class="sectionBreak" id="lastLine"/>
             </div>
-            <hr>
+            <footer><span>Created By: Matthew Knoll 2022</span><br/><span>Last Updated: </span><span id="lastUpdated">02/25/2022</span></footer>
         </div>
     </body>
 </html>
