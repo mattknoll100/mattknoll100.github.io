@@ -32,21 +32,6 @@
                 }
                 
             }
-            function hamburgerHover() {
-                var bar1 = document.getElementById("bar1");
-                var bar2 = document.getElementById("bar2");
-                var bar3 = document.getElementById("bar3");
-                var menu = [bar1, bar2, bar3];
-                if (bar1.style.backgroundColor == "floralwhite" || bar1.style.backgroundColor == "") {
-                    for (var i = 0; i < menu.length; i++) {
-                        menu[i].style.backgroundColor = "#DB5461";
-                    }
-                } else {
-                    for (var i = 0; i < menu.length; i++) {
-                        menu[i].style.backgroundColor = "floralwhite";
-                    }
-                }
-            }
         </script>
     </head>
     <body>
@@ -56,8 +41,8 @@
             </div>
             <ul id="nav">
                 <li id="hamburger">
-                    <div id="hamburgerBar" onclick="navigate();" onmouseover="hamburgerHover();" onmouseout="hamburgerHover();">
-                        <hr id="bar1" /><hr id="bar2" /><hr id="bar3" />
+                    <div id="hamburgerBar" onclick="navigate();">
+                        <hr class="bar"/><hr class="bar"/><hr class="bar"/>
                     </div>
                 </li>
                 <li class="navigate"><a href="#homeNav" onclick="navigate();">H<span>OME</span></a></li>
@@ -133,7 +118,7 @@
                     </div>
                     <div class="expInfo">
                         <h4>Key Software Systems</h4>
-                        <p>As part of a small team of 4 developers, I maintained and enhanced a large SaaS ASP.NET application used to operate all aspects of courier companies.  I provided clean, reusable code in HTML5, CSS3, JavaScript, jQuery, C#, Visual Basic, and SQL on a daily basis by adding new features and fixing software bugs.  I was in continuous communication with the development team and Graphic Designer, as well as the QA team in order to provide the greatest product possible.  I completed a project that increased the applications compatibility from solely Internet Explorer 7 to all modern web browsers (Chrome, IE, Edge, Firefox, Opera, and Safari) and mobile/tablet devices while enhancing the front end with a new design and integration with Kendo UI.  I loved working as a developer, but for personal and family reasons I left the position.</p>
+                        <p>As part of a small team of 4 developers, I maintained and enhanced a large SaaS ASP.NET application used to operate all aspects of courier companies.  I provided clean, reusable code in HTML5, CSS3, JavaScript, jQuery, C#, Visual Basic, and SQL on a daily basis by adding new features and fixing software bugs.  I was in continuous communication with the development team and Graphic Designer, as well as the QA team in order to provide the greatest product possible.  I completed a project that increased the application's compatibility from solely Internet Explorer 7 to all modern web browsers (Chrome, IE, Edge, Firefox, Opera, and Safari) and mobile/tablet devices while enhancing the front end with a new design and integration with Kendo UI.  I loved working as a developer, but for personal and family reasons I left the position.</p>
                     </div>
                 </div>
                 <br />
