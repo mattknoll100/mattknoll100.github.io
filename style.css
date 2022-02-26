@@ -264,6 +264,9 @@ footer {
     float: right;
     cursor: pointer;
 }
+#hamburgerBar:hover .bar {
+    background-color: #DB5461;
+}
 @media screen and (max-width: 920px){
     #hamburger {
         display: block;
@@ -340,4 +343,7 @@ footer {
     .headings {
         font-size: 45px;
     }
+}
+@media screen and (max-height: 475px){
+
 }
