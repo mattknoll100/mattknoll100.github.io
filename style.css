@@ -333,6 +333,17 @@ footer {
         visibility: visible!important;
     }
 }
+@media screen and (max-height: 475px) and (max-width: 920px) {
+    .navigate {
+        font-size: 15px;
+    }
+    .navigate a {
+        padding: 10px;
+    }
+    #nav span {
+        font-size: 12px;
+    }
+}
 @media screen and (max-width: 460px){
     #name {
         font-size: 60px;
@@ -343,7 +354,4 @@ footer {
     .headings {
         font-size: 45px;
     }
-}
-@media screen and (max-height: 475px){
-
 }
