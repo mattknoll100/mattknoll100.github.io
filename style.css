@@ -222,8 +222,14 @@ header {
     text-decoration: none;
     color: black;
 }
-.contactLink:hover {
+.contactLinkMobile {
+    text-decoration: none;
     color: #DB5461;
+}
+@media (hover: hover) {
+    .contactLink:hover {
+        color: #DB5461;
+    }
 }
 #lastLine {
     margin-top: 40px;
@@ -256,16 +262,23 @@ footer {
 #hamburger hr {
     height: 4px;
     border-radius: 25px;
-    background-color: floralwhite;
     width: 25px;
     margin: 6px;
+}
+.bar {
+    background-color: floralwhite;
+}
+.barMobile {
+    background-color: #DB5461;
 }
 #hamburgerBar {
     float: right;
     cursor: pointer;
 }
-#hamburgerBar:hover .bar {
-    background-color: #DB5461;
+@media (hover: hover) {
+    #hamburgerBar:hover .bar {
+        background-color: #DB5461;
+    }
 }
 @media screen and (max-width: 920px){
     #hamburger {

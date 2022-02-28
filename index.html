@@ -32,6 +32,29 @@
                 }
                 
             }
+            function mobileHam(event) {
+                var bars = document.getElementById("hamburgerBar").children;
+                if (event.type == "touchstart") {
+                    for (var i = 0; i < bars.length; i++) {
+                        bars[i].classList.remove("bar");
+                        bars[i].classList.add("barMobile");
+                    }
+                } else {
+                    for (var i = 0; i < bars.length; i++) {
+                        bars[i].classList.remove("barMobile");
+                        bars[i].classList.add("bar");
+                    }
+                }
+            }
+            function mobileContact(event) {
+                if (event.type == "touchstart") {
+                    event.target.classList.remove("contactLink");
+                    event.target.classList.add("contactLinkMobile");
+                } else {
+                    event.target.classList.remove("contactLinkMobile");
+                    event.target.classList.add("contactLink");
+                }
+            }
         </script>
     </head>
     <body>
@@ -41,7 +64,7 @@
             </div>
             <ul id="nav">
                 <li id="hamburger">
-                    <div id="hamburgerBar" onclick="navigate();">
+                    <div id="hamburgerBar" onclick="navigate();" ontouchstart="mobileHam(event);" ontouchend="mobileHam(event);">
                         <hr class="bar"/><hr class="bar"/><hr class="bar"/>
                     </div>
                 </li>
@@ -193,13 +216,13 @@
                 <hr class="sectionBreak"/>
                 <div id="contacts">
                     <h3>Email: </h3>
-                    <p><a class="contactLink" href="mailto: mattknoll100.com">mattknoll100@gmail.com</a></p>
+                    <p><a class="contactLink" href="mailto: mattknoll100.com" ontouchstart="mobileContact(event);" ontouchend="mobileContact(event);">mattknoll100@gmail.com</a></p>
                     <h3>Phone: </h3>
-                    <p><a class="contactLink" href="tel:609-410-6462">(609)-410-6462</a></p>
+                    <p><a class="contactLink" href="tel:609-410-6462" ontouchstart="mobileContact(event);" ontouchend="mobileContact(event);">(609)-410-6462</a></p>
                 </div>
                 <hr class="sectionBreak" id="lastLine"/>
             </div>
-            <footer><span>Created By: Matthew Knoll 2022</span><br/><span>Last Updated: </span><span id="lastUpdated">02/25/2022</span></footer>
+            <footer><span>Created By: Matthew Knoll 2022</span><br/><span>Last Updated: </span><span id="lastUpdated">02/27/2022</span></footer>
         </div>
     </body>
 </html>
